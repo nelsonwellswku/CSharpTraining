@@ -5,3 +5,10 @@ c:\users\nelson.wells\documents\visual studio 2012\Projects\TicTacToe\TicTacToe.
 c:\users\nelson.wells\documents\visual studio 2012\Projects\TicTacToe\TicTacToe.Tests\obj\Debug\TicTacToe.Tests.csprojResolveAssemblyReference.cache
 c:\users\nelson.wells\documents\visual studio 2012\Projects\TicTacToe\TicTacToe.Tests\obj\Debug\TicTacToe.Tests.dll
 c:\users\nelson.wells\documents\visual studio 2012\Projects\TicTacToe\TicTacToe.Tests\obj\Debug\TicTacToe.Tests.pdb
+C:\Users\Nelson\Documents\Visual Studio 2012\Projects\CSharpTraining\TicTacToe.Tests\bin\Debug\TicTacToe.Tests.dll
+C:\Users\Nelson\Documents\Visual Studio 2012\Projects\CSharpTraining\TicTacToe.Tests\bin\Debug\TicTacToe.Tests.pdb
+C:\Users\Nelson\Documents\Visual Studio 2012\Projects\CSharpTraining\TicTacToe.Tests\bin\Debug\TicTacToe.exe
+C:\Users\Nelson\Documents\Visual Studio 2012\Projects\CSharpTraining\TicTacToe.Tests\bin\Debug\TicTacToe.pdb
+C:\Users\Nelson\Documents\Visual Studio 2012\Projects\CSharpTraining\TicTacToe.Tests\obj\Debug\TicTacToe.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Nelson\Documents\Visual Studio 2012\Projects\CSharpTraining\TicTacToe.Tests\obj\Debug\TicTacToe.Tests.dll
+C:\Users\Nelson\Documents\Visual Studio 2012\Projects\CSharpTraining\TicTacToe.Tests\obj\Debug\TicTacToe.Tests.pdb

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/* By Nelson Wells and Marcus Young */
+
 namespace TicTacToe
 {
     public class Program
