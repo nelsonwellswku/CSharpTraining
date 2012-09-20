@@ -11,7 +11,7 @@ namespace VirtualDatabase.tests
         [TestMethod]
         public void Delete_Success()
         {
-            VDatabase virtualDatabase = new VDatabase();
+            VDatabase<IEntity> virtualDatabase = new VDatabase<IEntity>();
             IEntity person = new Person("Nelson", "Wells", 26, 101);
 
             int id = virtualDatabase.Insert(person);
@@ -23,7 +23,7 @@ namespace VirtualDatabase.tests
         [TestMethod]
         public void InsertAndRetrieve_InsertAnimalSocksThenRetrieve_Success()
         {
-            VDatabase virtualDatabase = new VDatabase();
+            VDatabase<IEntity> virtualDatabase = new VDatabase<IEntity>();
             IEntity animal = new Animal("Socks", 7, 100);
 
             int id = virtualDatabase.Insert(animal);

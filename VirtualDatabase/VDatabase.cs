@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace VirtualDatabase
 {
-    public class VDatabase
+    public class VDatabase<TEntity>
+        where TEntity : class, IEntity
     {
-        private IEntity[] collection;
+        private TEntity[] collection;
 
         public VDatabase()
         {
-            collection = new IEntity[100];            
+            collection = new TEntity[100];            
         }
 
-        public IEntity Retrieve(int id)
+        public TEntity Retrieve(int id)
         {
             foreach (var item in collection)
             {
@@ -43,7 +44,7 @@ namespace VirtualDatabase
             }
         }
 
-        public int Insert(IEntity entity)
+        public int Insert(TEntity entity)
         {
             int itemCount = 0;
 
