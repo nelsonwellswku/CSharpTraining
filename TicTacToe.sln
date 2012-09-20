@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeOO", "TicTacToeOO\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeOO.Tests", "TicTacToeOO.Tests\TicTacToeOO.Tests.csproj", "{7F475C31-AB74-4F7E-88B7-E41F902DE280}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualDatabase", "VirtualDatabase\VirtualDatabase.csproj", "{93FF7394-FB67-4722-ABD7-1FFA77BA3CEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualDatabase.tests", "VirtualDatabase.tests\VirtualDatabase.tests.csproj", "{ABA38A54-6BD6-4126-949C-3AF340330CC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{7F475C31-AB74-4F7E-88B7-E41F902DE280}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F475C31-AB74-4F7E-88B7-E41F902DE280}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F475C31-AB74-4F7E-88B7-E41F902DE280}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93FF7394-FB67-4722-ABD7-1FFA77BA3CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93FF7394-FB67-4722-ABD7-1FFA77BA3CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93FF7394-FB67-4722-ABD7-1FFA77BA3CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93FF7394-FB67-4722-ABD7-1FFA77BA3CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABA38A54-6BD6-4126-949C-3AF340330CC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA38A54-6BD6-4126-949C-3AF340330CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA38A54-6BD6-4126-949C-3AF340330CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA38A54-6BD6-4126-949C-3AF340330CC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
