@@ -45,8 +45,6 @@ namespace HelloWorld.Tests
         //}
 
 
-
-
         [TestMethod]
         public void Select_EvenIndexedKeywords_Length()
         {
@@ -131,6 +129,19 @@ namespace HelloWorld.Tests
             query.Take(10);
             query.ToList().Count();
 
+        }
+
+        [TestMethod]
+        public void Aggregate_JoinFirstLetterOfAllKeywordsAndFormString()
+        {
+            string expectedResult = "pvpr.";
+
+            string actualResult = keywords.Aggregate("", (t, u) => t += u[0].ToString());
+
+
+            Assert.AreEqual<string>(expectedResult, actualResult);
+
+            
         }
     }
 }

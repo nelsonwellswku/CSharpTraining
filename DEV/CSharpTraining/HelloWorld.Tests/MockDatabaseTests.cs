@@ -71,5 +71,25 @@ namespace HelloWorld.Tests
             Assert.IsNotNull(person);
             Assert.AreEqual<Person>(person, database.Person);
         }
+
+        [TestMethod]
+        public void Foreach_AddTwoTablesGetTwoTables_Success()
+        {
+            MockDatabase database = new MockDatabase();
+            database.Add(new Person("Inigo", "Montoya") { EntityId = 41 });
+            database.Add(new Employee("John", "Smith", 1234) { EntityId = 42 });
+
+            bool canImplementForeach = false;
+            int count = 0;
+
+            foreach (MockTable<IEntity> table in database)
+            {
+                canImplementForeach = true;
+                count++;
+            }
+
+            Assert.AreEqual<int>(2, count);
+            Assert.IsTrue(canImplementForeach);
+        }
     }
 }
