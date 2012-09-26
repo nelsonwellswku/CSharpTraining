@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{4A49F610-C313-46E8-A672-B57E961947CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{24CAF7BF-E5E7-4F37-B796-F48A363D09CA}"
+	ProjectSection(SolutionItems) = preProject
+		CSharpTraining.ruleset = CSharpTraining.ruleset
+		CSharpTraining.testsettings = CSharpTraining.testsettings
+		CSharpTraining.vsmdi = CSharpTraining.vsmdi
+		CustomDictionary.xml = CustomDictionary.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.Tests", "HelloWorld.Tests\HelloWorld.Tests.csproj", "{CAFB1E7A-D3FF-477F-A8B7-8D91D78AF0C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{3A3EA2F8-FA9A-4D4A-B384-A0727D4155CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Intellitect.ConsoleTest", "Intellitect.ConsoleTest", "{ECEB2DEC-0A78-4C2D-B5FE-3DB5FD3033D5}"
+	ProjectSection(SolutionItems) = preProject
+		packages\Intellitect.ConsoleTest\IntelliTect.Console.dll = packages\Intellitect.ConsoleTest\IntelliTect.Console.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelloWorld", "HelloWorld", "{330428A8-2B5B-4B13-98BC-D5029276BA1F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://intellitect.tfspreview.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = HelloWorld\\HelloWorld.csproj
+		SccProjectTopLevelParentUniqueName1 = CSharpTraining.sln
+		SccProjectName1 = HelloWorld
+		SccLocalPath1 = HelloWorld
+		SccProjectUniqueName2 = HelloWorld.Tests\\HelloWorld.Tests.csproj
+		SccProjectTopLevelParentUniqueName2 = CSharpTraining.sln
+		SccProjectName2 = HelloWorld.Tests
+		SccLocalPath2 = HelloWorld.Tests
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = CSharpTraining.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A49F610-C313-46E8-A672-B57E961947CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A49F610-C313-46E8-A672-B57E961947CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A49F610-C313-46E8-A672-B57E961947CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A49F610-C313-46E8-A672-B57E961947CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAFB1E7A-D3FF-477F-A8B7-8D91D78AF0C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAFB1E7A-D3FF-477F-A8B7-8D91D78AF0C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAFB1E7A-D3FF-477F-A8B7-8D91D78AF0C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAFB1E7A-D3FF-477F-A8B7-8D91D78AF0C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CAFB1E7A-D3FF-477F-A8B7-8D91D78AF0C1} = {330428A8-2B5B-4B13-98BC-D5029276BA1F}
+		{4A49F610-C313-46E8-A672-B57E961947CC} = {330428A8-2B5B-4B13-98BC-D5029276BA1F}
+		{3A3EA2F8-FA9A-4D4A-B384-A0727D4155CB} = {24CAF7BF-E5E7-4F37-B796-F48A363D09CA}
+		{ECEB2DEC-0A78-4C2D-B5FE-3DB5FD3033D5} = {3A3EA2F8-FA9A-4D4A-B384-A0727D4155CB}
+	EndGlobalSection
+EndGlobal
