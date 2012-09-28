@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DisplayAttribute.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="Initializer.cs" />
     <Compile Include="ISerializable.cs" />

@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace HelloWorld
 {
+
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1714:FlagsEnumsShouldHavePluralNames",
         Justification="This is plural it is just misidentified by the code analysis rule.")]
     [Flags]
     public enum DaysOfTheWeek : int
     {
+        [DisplayName("MONDAY", FormatString="Value={0}")]
         Monday = 1 << 0, 
         Tuesday = 1 << 1,
         Wednesday = 1 << 2,

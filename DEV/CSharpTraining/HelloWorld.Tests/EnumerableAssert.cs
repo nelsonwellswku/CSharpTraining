@@ -42,7 +42,8 @@ namespace HelloWorld.Tests
 
             int counter = 0;
             bool eMoveNext = false, aMoveNext = false;
-            Func<IEnumerator<T>, IEnumerator<T>, bool> moveNextFunc = (eEnumerator, aEnumerator) =>
+            Func<IEnumerator<T>, IEnumerator<T>, bool> moveNextFunc = 
+                (eEnumerator, aEnumerator) =>
             {
                 eMoveNext = e.MoveNext();
                 aMoveNext = a.MoveNext();

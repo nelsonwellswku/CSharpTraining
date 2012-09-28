@@ -10,11 +10,11 @@ namespace HelloWorld.Tests
         [TestMethod]
         public void Main_EverythingIsHunkyDory_Success()
         {
-            /*string[] args = {"42", "second"};
+            string[] args = {"42", "second"};
             IntelliTect.ConsoleView.Tester.Test(
                     "Hello, My name is....", () =>
                 Program.Main(args)
-            );*/
+            );
         }
 
         [TestMethod]

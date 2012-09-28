@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace HelloWorld.Tests
 {
@@ -10,11 +11,11 @@ namespace HelloWorld.Tests
     {
 
         private IEnumerable<int> Numbers =
-            new List<int>(){1,2,3,4,5,6,7,8,9};
+            new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-        private IEnumerable<string> keywords = 
-            new List<string>{"public", "void", "private", "return", "..."};
-                                                
+        private IEnumerable<string> keywords =
+            new List<string> { "public", "void", "private", "return", "..." };
+
 
         [TestMethod]
         public void Where_ItemsAreEven()
@@ -28,8 +29,8 @@ namespace HelloWorld.Tests
         public void Select_2ndLetter()
         {
             List<char> meeses = keywords.Select((string x) => x[1]).ToList();
-        
-            CollectionAssert.AreEquivalent(new char[] {'u', 'o', 'r', 'e', '.' }, meeses);
+
+            CollectionAssert.AreEquivalent(new char[] { 'u', 'o', 'r', 'e', '.' }, meeses);
 
         }
 
@@ -45,6 +46,8 @@ namespace HelloWorld.Tests
         //}
 
 
+
+
         [TestMethod]
         public void Select_EvenIndexedKeywords_Length()
         {
@@ -53,30 +56,31 @@ namespace HelloWorld.Tests
                 .Where(
                     (string s) => phil++ % 2 == 0
                 )
-                .Select<string,int>(
+                .Select<string, int>(
                     (string s) => s.Length
                 ).ToList();
 
-            int[] expected= new int[] { 6, 7, 3 };
+            int[] expected = new int[] { 6, 7, 3 };
 
             Assert.AreEqual<int>(expected.Length,
                 actual.Count());
 
             for (int counter = 0; counter < expected.Count(); counter++)
-			{
-			    Assert.AreEqual<int>(
+            {
+                Assert.AreEqual<int>(
                     expected[counter], actual[counter]);
-			}
+            }
         }
 
         [TestMethod]
         public void Select_LengthAndFirstCharacterOfKeywords_Length()
         {
             var actual = keywords
-                .Select(item=>
-                    new {
+                .Select(item =>
+                    new
+                    {
                         item.Length,
-                        FirstLetter=item[0]
+                        FirstLetter = item[0]
                     }).ToList();
 
             var expected = new[] 
@@ -87,7 +91,7 @@ namespace HelloWorld.Tests
                     new {Length=6, FirstLetter='r'},
                     new {Length=3, FirstLetter='.'},
                 };
-                    
+
 
             Assert.AreEqual<int>(expected.Length,
                 actual.Count());
@@ -106,7 +110,7 @@ namespace HelloWorld.Tests
         {
             int counter = 0;
             IEnumerable<string> query =
-                keywords.Where(item=>
+                keywords.Where(item =>
                     {
                         counter++;
                         return true;
@@ -125,23 +129,45 @@ namespace HelloWorld.Tests
             }
 
             Assert.AreEqual<int>(
-                2*keywords.Count(), counter);
+                2 * keywords.Count(), counter);
             query.Take(10);
             query.ToList().Count();
 
         }
 
+
         [TestMethod]
-        public void Aggregate_JoinFirstLetterOfAllKeywordsAndFormString()
+        public void SimpleQueryExpression()
         {
-            string expectedResult = "pvpr.";
+            IEnumerable<System.IO.FileInfo> files =
+                from word in keywords
+                where word.Length < 100000
+                let file = new System.IO.FileInfo(word)
+                select new System.IO.FileInfo(word);
 
-            string actualResult = keywords.Aggregate("", (t, u) => t += u[0].ToString());
+            IEnumerable<string> words = 
+                keywords.Where((word) => word[0] == 'p');
 
-
-            Assert.AreEqual<string>(expectedResult, actualResult);
-
-            
+            Assert.AreEqual<int>(2, words.Count());
+            foreach (string word in words)
+            {
+                Assert.AreEqual<char>(
+                    'p', word[0]);
+            }
         }
+
+        [TestMethod]
+        public void Aggregate_CollectAStringWithAllFirstLetters()
+        {
+            string text = keywords.Aggregate<string, string>("", 
+                (accumulator, input) =>
+                    {
+                        return accumulator += input[0];
+                    });
+            Assert.AreEqual<string>("pvpr.",
+                text);
+        }
+
+ 
     }
 }

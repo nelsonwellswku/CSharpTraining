@@ -39,6 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="IntelliTect.Console, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Intellitect.ConsoleTest\IntelliTect.Console.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -54,15 +58,20 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DisplayNameAttributeTests.cs" />
     <Compile Include="EnumerableAssert.cs" />
     <Compile Include="EnumerableAssertTests.cs" />
     <Compile Include="GenericStuffTests.cs" />
     <Compile Include="CoAndContraVariance.cs" />
+    <Compile Include="JsonObject.cs" />
     <Compile Include="MockDatabaseTests.cs" />
     <Compile Include="FactoryTests.cs" />
     <Compile Include="LinqPrerequisiteTests.cs" />
     <Compile Include="TestEntity.cs" />
     <Compile Include="LinqTests.cs" />
+    <None Include="LoadTest.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="NullableInt.cs" />
     <Compile Include="NullableTestsBase.cs" />
     <Compile Include="MockTableTests.cs" />

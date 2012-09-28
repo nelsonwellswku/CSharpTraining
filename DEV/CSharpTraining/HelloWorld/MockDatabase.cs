@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HelloWorld
 {
-    public class MockDatabase : IEnumerable<MockTable<IEntity>>
+    public class MockDatabase
     {
         Initializer<Person> _PersonFactory = new Initializer<Person>(
             CreatePerson);
@@ -63,17 +63,12 @@ namespace HelloWorld
             return !item.Equals(default(T));
         }
 
-        public IEnumerator<MockTable<IEntity>> GetEnumerator()
+        public MockTable<IEntity> this[Type index]
         {
-            foreach (var table in Tables)
+            get
             {
-                yield return table.Value;
+                return Tables[index];
             }
-        }
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
         }
     }
 }

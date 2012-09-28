@@ -73,23 +73,12 @@ namespace HelloWorld.Tests
         }
 
         [TestMethod]
-        public void Foreach_AddTwoTablesGetTwoTables_Success()
+        public void Index_SelectTestEntity_ReturnTestEntityMockTable()
         {
             MockDatabase database = new MockDatabase();
-            database.Add(new Person("Inigo", "Montoya") { EntityId = 41 });
-            database.Add(new Employee("John", "Smith", 1234) { EntityId = 42 });
-
-            bool canImplementForeach = false;
-            int count = 0;
-
-            foreach (MockTable<IEntity> table in database)
-            {
-                canImplementForeach = true;
-                count++;
-            }
-
-            Assert.AreEqual<int>(2, count);
-            Assert.IsTrue(canImplementForeach);
+            database.Add(new TestEntity(42));
+            MockTable <IEntity> testEntities =
+                database[typeof(TestEntity)];
         }
     }
 }
