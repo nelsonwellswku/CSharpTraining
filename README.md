@@ -1,3 +1,9 @@
+# C# Training Exercises
+
+A collection of any C# related tutorials, exercises, classes, etc that I've done to learn new things.  Parentheses content indicate the folder in the repository.
+
+## Training class presented by Mark Michaelis (CSharpTrainingClass)
+
 I am participating in a 2 week C# training course.  Most days, there will be a
 small exercise to do on our own that will give us an opportunity to use the
 things we've learned from that day.
